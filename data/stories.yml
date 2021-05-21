@@ -1,0 +1,39 @@
+version: "2.0"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: que es scrum
+  steps:
+  - intent: que_es_scrum
+  - action: utter_que_es_scrum
+  - intent: que_es_un_framework
+  - action: utter_que_es_un_framework
+  - intent: es_una_metodologia
+  - action: utter_metodologia
+  - action: action_set_perfil_secuencial
+  - action: utter_perfil
+
+- story: que es un framework
+  steps:
+  - intent: que_es_un_framework
+  - action: utter_que_es_un_framework
+
+- story: roles
+  steps:
+  - intent: roles
+  - action: utter_roles
+
+- story: artefactos
+  steps:
+  - intent: artefactos
+  - action: utter_artefactos
+

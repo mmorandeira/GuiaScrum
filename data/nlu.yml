@@ -1,0 +1,97 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - buenas
+    - hello
+    - hi
+    - hola
+    - holis
+    - buen dia
+    - qué tal?
+    - buenos días
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+
+- intent: goodbye
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos luego
+    - hasta pronto
+    - nos vemos más tarde
+    - chau
+    - hasta la próxima
+    - bye
+
+- intent: affirm
+  examples: |
+    - sí
+    - si
+    - por supuesto
+    - suena bien
+    - correcto
+    - está bien
+    - entendido
+    - enterado
+
+- intent: deny
+  examples: |
+    - no
+    - jamás
+    - no lo creo
+    - no creo
+    - no me gusta eso
+    - no me convence
+    - no creo que sea correcto
+    - nada
+
+- intent: que_es_scrum
+  examples: |
+    - que es [scrum](contexto)?
+    - en que consiste [scrum](contexto)?
+    - que es el proceso [scrum](contexto)?
+    - como es el proceso [scrum](contexto)?
+    - en que consiste el proceso [scrum](contexto)?
+
+- intent: que_es_un_framework
+  examples: |
+    - que es un framework?
+    - a que te referis con framework?
+    - me podes explicar que es un framework?
+    - que seria un framewor?
+
+- intent: roles
+  examples: |
+    - cuales son los roles?
+    - para que son los roles?
+    - que roles hay?
+    - que roles intervienen?
+    - para que sirven los roles?
+
+- intent: artefactos
+  examples: |
+    - que son los artefactos?
+    - para que sirven los artefactos?
+    - cual es la funcionalidad de los artefactos?
+    - cual es la función de los artefactos?
+    - cuales son los artefactos de scrum?
+    - cuales son los artefactos?
+    - para que son los artefactos?
+    - que se ve en los artefactos?
+
+- intent: es_una_metodologia
+  examples: |
+    - scrum no es una metodologia?
+    - cual es la diferencia entre metodologia y framework?
+    - es lo mismo framework que metodologia?
+    - pense que scrum era una metodologia?
+    - pense que era una metodologia
+    - no es una metodologia?
+    - entonces que es una metodologia?
+    - que es una metodologia?
+
+
+

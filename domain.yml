@@ -1,0 +1,54 @@
+version: "2.0"
+
+intents:
+  - affirm
+  - deny
+  - greet
+  - goodbye
+  - que_es_scrum
+  - que_es_un_framework
+  - roles
+  - artefactos
+  - es_una_metodologia
+  #- eventos
+
+entities:
+  - contexto
+
+slots:
+  perfil:
+    type: text
+    initial_value: None
+
+actions:
+  - action_set_perfil_secuencial
+ 
+responses:
+  utter_greet:
+  - text: ¡Hola! Estoy aquí para guiarte en el proceso Scrum. ¿En qué puedo ayudarte?
+  - text: ¡Hola! Estoy aquí para responder las consultas que tengas sobre el proceso Scrum.
+
+  utter_goodbye:
+  - text: ¡Adiós!, ante cualquier duda que tengas sobre Scrum ya sabes donde encontrarme.
+  - text: Hasta luego!, no dudes en volver a consultarme si tenes otra duda sobre Scrum.
+  - text: Hasta pronto, ante cualquier duda que tengas sobre Scrum ya sabes donde encontrarme.
+
+  utter_que_es_scrum:
+  - text: Scrum es un framework que define un conjunto de eventos, prácticas y roles, y que puede tomarse como conjunto base para definir el proceso de producción que usará un equipo de trabajo o dentro de un proyecto.
+
+  utter_que_es_un_framework:
+  - text: Es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.
+  
+  utter_roles:
+  - text: "Los roles principales en Scrum son: \n- El Scrum Master, que procura facilitar la aplicación de Scrum y gestionar cambios. \n- El Product Owner, que representa a los stakeholders. Es el encargado de priorizar y colocar las user stories en el Product Backlog. \n- El Team, que ejecuta el desarrollo y demás elementos relacionados con él."
+
+  utter_artefactos:
+  - text: "Los artefactos son los elementos que garantizan la transparencia y el registro de la información fundamental del proceso. Los principales artefactos en Scrum son: \n- Product Backlog: Registra y prioriza los requisitos desde el punto del vista del cliente. \n- Sprint Backlog: Registro de los requisitos desde el punto de vista de los desarrolladores. Es la lista de tareas que se deben realizar durante un sprint para lograr el incremento previsto. \n- Incremento: Resultado de cada sprint. "
+
+  utter_metodologia:
+  - text: Una metodología impone una serie de procesos, ceremonias, documentos, estándares, etc. Con un cierto nivel de rigidez. Mientras que un framework da una serie de pautas, roles, artefactos, ceremonias, etc que se pueden usar como guía. Por lo tanto, Scrum no es una metodología porque simplemente brinda una guia de los pasos a seguir, pero lo que funciona para un equipo no necesariamente funciona para otro. Es flexible.
+
+  utter_perfil:
+  - text: perfil = {perfil}
+
+  
