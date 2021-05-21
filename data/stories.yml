@@ -15,17 +15,8 @@ stories:
   steps:
   - intent: que_es_scrum
   - action: utter_que_es_scrum
-  - intent: que_es_un_framework
-  - action: utter_que_es_un_framework
   - intent: es_una_metodologia
   - action: utter_metodologia
-  - action: action_set_perfil_secuencial
-  - action: utter_perfil
-
-- story: que es un framework
-  steps:
-  - intent: que_es_un_framework
-  - action: utter_que_es_un_framework
 
 - story: roles
   steps:
@@ -37,3 +28,7 @@ stories:
   - intent: artefactos
   - action: utter_artefactos
 
+- story: proceso_scrum
+  steps:
+  - intent: proceso_scrum
+  - utter: utter_proceso_scrum

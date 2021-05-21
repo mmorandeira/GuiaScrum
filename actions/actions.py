@@ -3,7 +3,7 @@
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
-
+'''
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -33,3 +33,5 @@ class ActionSetSlotInt(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #dispatcher.utter_message(text='setear slot')
         return [SlotSet('perfil', "intuitivo")]
+
+'''

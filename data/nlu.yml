@@ -56,13 +56,6 @@ nlu:
     - como es el proceso [scrum](contexto)?
     - en que consiste el proceso [scrum](contexto)?
 
-- intent: que_es_un_framework
-  examples: |
-    - que es un framework?
-    - a que te referis con framework?
-    - me podes explicar que es un framework?
-    - que seria un framewor?
-
 - intent: roles
   examples: |
     - cuales son los roles?
@@ -93,5 +86,14 @@ nlu:
     - entonces que es una metodologia?
     - que es una metodologia?
 
+- intent: proceso_scrum
+  examples: |
+    - como funciona el proceso?
+    - como es el proceso scrum?
+    - que se hace en el proceso scrum?
+    - como aplico scrum?
+    - como aplicar el proceso scrum?
+    - como funciona scrum?
+    - como es el proceso?
 
 
