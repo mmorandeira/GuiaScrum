@@ -31,4 +31,19 @@ stories:
 - story: proceso_scrum
   steps:
   - intent: proceso_scrum
-  - utter: utter_proceso_scrum
+  - action: utter_proceso_scrum
+
+- story: que hace el scrum master
+  steps:
+  - intent: trabajo_scrum_master
+  - action: action_trabajo_scrum_master
+
+- story: que hace el product owner
+  steps:
+  - intent: trabajo_product_owner
+  - action: utter_trabajo_product_owner
+
+- story: que hace el desarrollador
+  steps:
+  - intent: trabajo_desarrollador
+  - action: utter_trabajo_desarrollador

@@ -88,6 +88,8 @@ nlu:
 
 - intent: proceso_scrum
   examples: |
+    - cuales son los eventos?
+    - que eventos hay en scrum?
     - como funciona el proceso?
     - como es el proceso scrum?
     - que se hace en el proceso scrum?
@@ -95,5 +97,50 @@ nlu:
     - como aplicar el proceso scrum?
     - como funciona scrum?
     - como es el proceso?
+    - como es el flujo de trabajo?
+    - me podes explicar el flujo de trabajo?
+    - como seria el flujo del proceso?
+    - como es el flujo de scrum?
+
+
+- intent: trabajo_scrum_master
+  examples: | 
+    - que hace el scrum master?
+    - que tengo que hacer si soy scrum master?
+    - de que se encarga el scrum master?
+    - que hago si soy scrum master?
+    - que tiene que hacer el scrum master?
+    - que hace el scrum master durante la [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hace el scrum master durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hace el scrum master durante la [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hace el scrum master durante la [sprint review]{"entity":"etapa","value":"review"}?
+    - que hace el scrum master durante el [sprint]{"entity":"etapa","value":"sprint"}?
+
+
+- intent: trabajo_product_owner
+  examples: | 
+    - que hace el product owner?
+    - que tengo que hacer si soy product owner?
+    - de que se encarga el product owner?
+    - que hago si soy product owner?
+    - que tiene que hacer el product owner?
+
+- intent: trabajo_desarrollador
+  examples: | 
+    - que hace el desarrollador?
+    - que hace el programador?
+    - que tengo que hacer si soy desarrollador?
+    - que tengo que hacer si soy programador?
+    - de que se encarga el desarrollador?
+    - de que se encarga el programador?
+    - que hago si soy desarrollador?
+    - que hago si soy programador?
+    - que tiene que hacer el programador?
+    - que tiene que hacer el desarrollador?
+    - que hago si soy estoy en el equipo de dearrollo?
+    - de que me encargo si soy parte del equipo de desarrollo?
+    - que hago si estoy en el equipo de desarrollo?
+
+
 
 

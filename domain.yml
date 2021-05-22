@@ -10,10 +10,22 @@ intents:
   - roles
   - artefactos
   - es_una_metodologia
-  #- eventos
+  - proceso_scrum
+  - trabajo_scrum_master
+  - trabajo_product_owner
+  - trabajo_desarrollador
 
 entities:
   - contexto
+  - etapa
+
+slots:
+  etapa:
+    type: text
+    initial_value: "None"
+
+actions:
+  - action_trabajo_scrum_master
  
 responses:
   utter_greet:
@@ -34,13 +46,66 @@ responses:
   - Solapar las diferentes fases del desarrollo, en lugar de realizar una tras otra en un ciclo secuencial o en cascada."
   
   utter_roles:
-  - text: "Un equipo Scrum suele estar compuesto por grupos de trabajo de entre 3 a 9 miembros del equipo de desarrollo, más el Scrum Master y el Product Owner. Cada uno de estos roles tiene diferentes responsabilidades: \n- El Scrum Master tiene dos funciones principales dentro del marco de trabajo: gestionar el proceso Scrum y ayudar a eliminar impedimentos que puedan afectar a la entrega del producto. Además, se encarga de las labores de mentoring y formación, coaching y de facilitar reuniones y eventos si es necesario. \n- El Product Owner, que representa a los stakeholders. Es el encargado de optimizar y maximizar el valor del producto, siendo la persona encargada de gestionar el flujo de valor del producto a través del Product Backlog. \n- El equipo de desarrollo se encarga de desarrollar el producto, auto-organizándose y auto-gestionándose para conseguir entregar un incremento de software al final del ciclo de desarrollo. "
+  - text: "Un equipo Scrum suele estar compuesto por grupos de trabajo de entre 3 a 9 miembros del equipo de desarrollo, más el Scrum Master y el Product Owner. Cada uno de estos roles tiene diferentes responsabilidades: \n
+  - El Scrum Master tiene dos funciones principales dentro del marco de trabajo: gestionar el proceso Scrum y ayudar a eliminar impedimentos que puedan afectar a la entrega del producto. Además, se encarga de las labores de mentoring y formación, coaching y de facilitar reuniones y eventos si es necesario. \n
+  - El Product Owner, que representa a los stakeholders. Es el encargado de optimizar y maximizar el valor del producto, siendo la persona encargada de gestionar el flujo de valor del producto a través del Product Backlog. \n
+  - El equipo de desarrollo se encarga de desarrollar el producto, auto-organizándose y auto-gestionándose para conseguir entregar un incremento de software al final del ciclo de desarrollo. \n
+  Además existen roles auxiliares en los equipos Scrum que no tienen un rol formal y no se involucran frecuentemente en el proceso Scrum, sin embargo deben ser tomados en cuenta.\n
+  - Stakeholders (Clientes, Proveedores, Vendedores, etc): Son las personas que hacen posible el proyecto y para quienes el proyecto producirá el beneficio acordado que justifica su desarrollo. Solo participan directamente durante las revisiones del sprint."
 
   utter_artefactos:
-  - text: "Los artefactos son los elementos que garantizan la transparencia y el registro de la información fundamental del proceso. Los principales artefactos en Scrum son: \n- Product Backlog: Registra y prioriza los requisitos desde el punto del vista del cliente. \n- Sprint Backlog: Registro de los requisitos desde el punto de vista de los desarrolladores. Es la lista de tareas que se deben realizar durante un sprint para lograr el incremento previsto. \n- Incremento: Resultado de cada sprint. "
+  - text: "Los artefactos son los elementos que garantizan la transparencia y el registro de la información fundamental del proceso. Los principales artefactos en Scrum son: \n
+  - Product Backlog: Registra y prioriza los requisitos desde el punto del vista del cliente. \n
+  - Sprint Backlog: Registro de los requisitos desde el punto de vista de los desarrolladores. Es la lista de tareas que se deben realizar durante un sprint para lograr el incremento previsto. \n
+  - Incremento: Resultado de cada sprint. "
 
   utter_metodologia:
   - text: Una metodología impone una serie de procesos, ceremonias, documentos, estándares, etc. Con un cierto nivel de rigidez. Mientras que un framework da una serie de pautas, roles, artefactos, ceremonias, etc que se pueden usar como guía. Por lo tanto, Scrum no es una metodología porque simplemente brinda una guia de los pasos a seguir, pero lo que funciona para un equipo no necesariamente funciona para otro. Es flexible.
 
-# hacer utter_proceso
+  utter_proceso_scrum:
+  - text: "En Scrum un proyecto se ejecuta en ciclos temporales cortos y de duración fija (iteraciones que normalmente son de 2 a 4 semanas). Cada iteración tiene que proporcionar un resultado completo, un incremento de producto final que sea susceptible de ser entregado con el mínimo esfuerzo al cliente cuando lo solicite. El proceso parte de la lista de objetivos/requisitos priorizada del producto, que actúa como plan del proyecto. En esta lista el Product Owner prioriza los objetivos balanceando el valor que le aportan respecto a su coste y quedan repartidos en iteraciones y entregas. Las actividades que se llevan a cabo en Scrum son las siguientes: \n
+  1) Planificación de la iteración: El primer día de la iteración se realiza la reunión de planificación de la iteración. Tiene dos partes: \n
+  1.1) Selección de requisitos (2 horas). El cliente presenta al equipo la lista de requisitos priorizada del producto o proyecto. El equipo pregunta al cliente las dudas que surgen y selecciona los requisitos más prioritarios que prevé que podrá completar en la iteración, de manera que puedan ser entregados si el cliente lo solicita. \n
+  1.2) Planificación de la iteración (2 horas). El equipo elabora la lista de tareas de la iteración necesarias para desarrollar los requisitos seleccionados. La estimación de esfuerzo se hace de manera conjunta y los miembros del equipo se autoasignan las tareas, se autoorganizan para trabajar incluso en parejas (o grupos mayores) con el fin de compartir conocimientos o para resolver juntos objetivos especialmente complejos.\n
+  2) Ejecución de la iteración: Cada día el equipo realiza una reunión de sincronización (15 minutos), normalmente delante de un tablero físico o pizarra. El equipo inspecciona el trabajo que el resto está realizando para poder hacer las adaptaciones necesarias que permitan cumplir con la previsión de objetivos a mostrar al final de la iteración. \n
+  Durante la iteración el Scrum Master se encarga de que el equipo pueda mantener el foco para cumplir con sus objetivos. Por otra parte, el cliente junto con el equipo refinan la lista de requisitos y, si es necesario, cambian o replanifican los objetivos del proyecto con el objetivo de maximizar la utilidad de lo que se desarrolla y el retorno de inversión.\n
+  3) Inspección y adaptación: El último día de la iteración se realiza la reunión de revisión de la iteración. Tiene dos partes: \n
+  3.1) Revisión (demostración) (1,5 horas). El equipo presenta al cliente los requisitos completados en la iteración, en forma de incremento de producto preparado para ser entregado con el mínimo esfuerzo. En función de los resultados mostrados y de los cambios que haya habido en el contexto del proyecto, el cliente realiza las adaptaciones necesarias de manera objetiva, ya desde la primera iteración, replanificando el proyecto. \n
+  3.2) Retrospectiva (1,5 horas). El equipo analiza cómo ha sido su manera de trabajar y cuáles son los problemas que podrían impedirle progresar adecuadamente, mejorando de manera continua su productividad. El Facilitador se encargará de eliminar o escalar los obstáculos identificados que estén más allá del ámbito de acción del equipo."
   
+  
+  utter_trabajo_scrum_master:
+  - text: "El Scrum Master es el responsable de que Scrum sea entendido y bien aplicado dentro de la organización. Trabaja junto con el Product Owner y el equipo de desarrollo en la creación de valor en cada sprint. Elimina impedimentos y ayuda a ser más productivo al Equipo de desarrollo. \n
+  En cada evento de Scrum el Scrum Master cumple el rol de facilitador, es decir, en una reunión, evento o conversación se encarga de que se cumpla el objetivo de ese espacio, que estén disponibles todos los recursos que se necesitan y que todas las voces sean escuchadas. Debe ser neutral sobre las decisiones: intervenir sobre el proceso no sobre el resultado. \n
+  1) En la planificación de la iteración: \n
+  - Trabaja en conjunto con el Product Owner en el refinamiento del Product Backlog.\n
+  - Trabaja con el Product Owner en la creación de las historias de usuario \n
+  - Interviene en caso que no quede claro el objetivo del sprint o alguna característica del producto. \n
+  2) Durante la ejecución del sprint: \n
+  - Guía al equipo de desarrollo a ser autoorganizado y multifuncional.\n
+  - Remueve impedimentos que pueda tener el equipo de desarrollo durante la ejecución.\n
+  - Facilita eventos de Scrum o espacios de conversación que se requieran durante la etapa. Como por ejemplo las Daily Meetings. \n
+  - Interviene en la Daily Scrum si no se están visibilizando realmente los impedimentos.\n
+  - Ayuda al equipo con la creación y actualización de un Burndown Chart que le permita transparentar el Sprint en curso, inspeccionar y adaptarse. \n
+  - Ayuda al equipo en la preparación de una demo para presentar a los Stakeholders. \n
+  - Maneja un backlog de impedimentos visible para todo el equipo. \n
+  3) Durante las etapas de revisión y retrospectiva del sprint debe: \n
+  - Organizar una agenda en conjunto con el Product Owner para los diversos Stakeholders. \n
+  - Hacer preguntas a Stakeholders que permitan recibir feedback de valor al equipo. \n
+  - Facilitar la retrospectiva e intervenir mediante preguntas que generen reflexión y perspectiva.\n
+  - Intervenir en la Retrospectiva si se está finalizando sin medidas accionables."
+  
+  utter_trabajo_scrum_master_planificacion:
+  - text: "- Trabaja en conjunto con el Product Owner en el refinamiento del Product Backlog.\n
+- Trabaja con el Product Owner en la creación de las historias de usuario \n
+- Interviene en caso que no quede claro el objetivo del sprint o alguna característica del producto. \n etapa: {etapa}"
+  
+  utter_trabajo_scrum_master_daily:
+  - text: "- Se encarga de que se cumpla el objetivo de la reunión, que estén disponibles todos los recursos que se necesitan y que todas las voces sean escuchadas. \n
+  - Interviene si considera que no se están visibilizando realmente los impedimentos. \n etapa: {etapa}"
+
+  utter_trabajo_product_owner:
+  - text: ""
+
+  utter_trabajo_desarrollador:
+  - text: ""
