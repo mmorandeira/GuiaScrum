@@ -51,12 +51,21 @@ stories:
 - story: que es el product backlog
   steps:
   - intent: product_backlog
-  - action: action_backlog
+  - action: utter_product_backlog  
+  - intent: affirm
+  - action: utter_diseño_backlog
+
+- story: que es el product backlog
+  steps:
+  - intent: product_backlog
+  - action: utter_product_backlog  
+# probar
+  - intent: deny
 
 - story: que es el sprint backlog
   steps:
   - intent: sprint_backlog
-  - action: action_backlog
+  - action: utter_sprint_backlog
 
 - story: que es el incremento
   steps: 
@@ -75,7 +84,7 @@ stories:
   - intent: que_hacer_etapa
   - action: action_verificar_rol
 
-# probar y hacer utters
+# probar
 - story: eventos
   steps: 
   - intent: eventos
@@ -101,7 +110,27 @@ stories:
   - intent: sprint_retrospective
   - action: utter_sprint_retrospective
 
-- story: grooming
+- story: sprint_grooming
   steps:
-  - intent: grooming
+  - intent: sprint_grooming
   - action: utter_grooming
+
+- story: user story
+  steps:
+  - intent: user_story
+  - action: utter_user_story
+
+- story: epicas
+  steps:
+  - intent: epica
+  - action: utter_epica
+
+- story: tareas tecnicas
+  steps:
+  - intent: tarea_tecnica
+  - action: utter_tarea
+
+- story: comos se hace un backlog
+  steps:
+  - intent: diseño_backlog
+  - action: utter_diseño_backlog

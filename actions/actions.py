@@ -9,8 +9,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 import rasa_sdk
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet,AllSlotsReset
-from rasa_sdk.events import UserUtteranceReverted
+from rasa_sdk.events import SlotSet
+
 
 class ActionTrabajoScrumMaster(Action):
 
@@ -87,31 +87,12 @@ class ActionTrabajoDesarrollador(Action):
         dispatcher.utter_message(message)
         return [SlotSet('etapa', 'None')]
 
-class ActionBacklog(Action):
+class ActionQueHacer(Action):
 
-    '''
-        Esta acción se hizo porque al entrenar el modelo se confundia sprint backlog con product backlog
-    '''
-
-    def name(self) -> Text:
-        return "action_backlog"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        contexto = tracker.get_slot('contexto')
-        switcher = {
-            'sprint' : 'Este artefacto es un elemento para visualizar el trabajo a realizar durante cada Sprint y está gestionado por el equipo de desarrollo. Su propósito es mantener la transparencia dentro del desarrollo, actualizándolo durante toda la iteración especialmente a través de los daily Scrums.',
-            'product' : 'El Product Backlog es un inventario que contiene cualquier tipo de trabajo que haya que hacer en el producto: requerimientos, casos de uso, tareas y dependencias. Es la principal fuente de información sobre el producto en Scrum, una lista, en cualquier formato, que contiene todos los requerimientos que necesitamos implementar en el producto. El Product Backlog debe ser gestionado en exclusiva por el Product Owner.'
-        }    
-        message = switcher.get(contexto)
-        dispatcher.utter_message(message)
-        return [SlotSet('contexto', 'None')]
-
-class ActionPrueba(Action):
     '''
         Esta acción le indica al usuario que tiene que hacer según su rol y fase en la cual se encuentra
     '''
+
     def name(self) -> Text:
         return "action_que_hacer"
 

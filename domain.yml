@@ -24,18 +24,18 @@ intents:
   - daily_meeting
   - sprint_review
   - sprint_retrospective
-  - grooming
+  - sprint_grooming
+  - user_story
+  - epica
+  - tarea_tecnica
+  - diseño_backlog
 
 entities:
   - etapa
-  - contexto
   - rol
 
 slots:
   etapa:
-    type: text
-    initial_value: 'None'
-  contexto:
     type: text
     initial_value: 'None'
   rol:
@@ -46,7 +46,6 @@ actions:
   - action_trabajo_scrum_master
   - action_trabajo_product_owner
   - action_trabajo_desarrollador
-  - action_backlog
   - action_que_hacer
   - action_verificar_rol
 
@@ -113,16 +112,53 @@ responses:
   Todo ocurre en un solo Sprint y en cada Sprint y es el product owner quien decide dónde y a qué dedicar los recursos."
 
   utter_sprint_planning:
-  - text: 
+  - text: "El Sprint Planning es una reunión que se realiza al comienzo de cada Sprint donde participa el equipo Scrum al completo; sirve para inspeccionar el Backlog del Producto (Product Backlog ) y que el equipo de desarrollo seleccione los Product Backlog Items en los que va a trabajar durante el siguiente Sprint. Estos Product Backlog Items son los que compondrán el Sprint Backlog. \n 
+  Durante esta reunión, el product owner presenta el Product Backlog actualizado que el equipo de desarrollo se encarga de estimar, además de intentar clarificar aquellos ítems que crea necesarios.\n
+  El Sprint Planning se divide en dos partes. En la primera parte de la reunión se trata Qué se va a hacer en el siguiente Sprint y, en la segunda parte, se discute el Cómo. La primera parte está organizada y liderada por el product owner, mientras que de la segunda parte se encarga el Development Team. La única labor del Scrum Master es asegurarse de que la reunión existe como parte de Scrum y que se mantiente dentro de las duraciones estimadas.\n
+  El Sprint Planning puede durar hasta 8 horas para Sprints de 4 semanas. La razón del Sprint Planning es conseguir alineamiento entre negocio y desarrollo de producto en relación a las prioridades."
   
   utter_daily_meeting:
-  - text:
+  - text: "El Daily Scrum o Daily Meeting es una reunión diaria de 15 minutos en la que participa exclusivamente el Development Team. En esta reunión todas y cada una de las personas del Development Team responden a las siguientes preguntas: \n
+  1. ¿Qué hice ayer para contribuir al Sprint Goal? \n
+  2. ¿Qué voy a hacer hoy para contribuir al Sprint Goal? \n
+  3. ¿Tengo algún impedimento que me impida entregar? \n
+  Esta reunión permite la inspección y adaptación a través de la auto-organización del equipo."
 
   utter_sprint_review:
-  - text: 
+  - text: "El Sprint Review es la reunión que ocurre al final del Sprint donde el Product Owner y el Develpment Team presentan a los stakeholders el incremento terminado para su inspección y adaptación correspondientes. En esta reunión organizada por el product owner se estudia cuál es la situación y se actualiza el Product Backlog con las nuevas condiciones que puedan afectar al negocio.\n
+  Por un lado, se revisará el incremento terminado. Se mostrará el software funcionando en producción y los stakeholders tendrán la oportunidad de hacer cuantas preguntas estimen oportunas sobre el mismo. El software funcionando ha sido validado previamente por el product owner, que se ha encargado de trabajar con el equipo durante el Sprint para asegurarse que cumple con la Definition of Done y, efectivamente, hace que el Sprint Goal sea válido. Si no existe software funcionando, el Sprint Review carece de sentido, aunque en ciertas ocasiones y oportunidades se sigue manteniendo.\n
+  El equipo de desarrollo comenta posteriormente qué ha ocurrido durante el Sprint, los impedimentos que se han encontrado, así como soluciones tomadas y actualizan a los stakeholders con la situación del equipo. Por último, el product owner actualiza -con la información de negocio recibida en esta reunión- el Product Backlog para el siguiente Sprint.\n
+  La duración estimada en el estándar para un Sprint Review es de 8 horas para un Sprint de 4 semanas, aunque habitualmente estas reuniones se ejecutan en un entorno de entre 2 y 3 horas."
   
   utter_sprint_retrospective:
-  - text:
+  - text: "La retrospectiva ocurre al final del Sprint, justo después del Sprint Review. En algunos casos y por comodidad de los equipos, se realiza conjuntamente con el Sprint Planning, siendo la retrospectiva la parte inicial de la reunión.\n
+  El objetivo de la retrospectiva es hacer de reflexión sobre el último Sprint e identificar posibles mejoras para el próximo. Aunque lo habitual es que el Scrum Master sea el facilitador, es normal que distintos miembros del equipo Scrum vayan rotando el rol de facilitador durante la retrospectiva. \n
+  Un formato común es analizar qué ha ido bien durante el Sprint, qué ha fallado y qué se puede mejorar. Este formato se puede facilitar pidiendo a los miembros del equipo Scrum que escriban notas –en post-its- para luego agruparlas y votar aquellos ítems más relevantes, dando la oportunidad a todos de hablar y expresar sus inquietudes.\n
+  La duración recomendada por Scrum para un Sprint de 4 semanas es de un máximo de 3 horas, aunque habitualmente se destina entre 1 y 2 horas a este evento."
   
   utter_grooming:
-  - text:
+  - text: "El Sprint Grooming o Refinemento es el refinamiento del Product Backlog, es una práctica recomendada para asegurar que éste siempre esté preparado. Esta ceremonia sigue un patrón similar al resto y tiene una agenda fija específica en cada Sprint. Se estima su duración en 2 horas máximo por semana del Sprint. Es responsabilidad del Product Owner agendar, gestionar y dirigir esta reunión. \n
+  Los participantes de esta reunión son todo el equipo Scrum (Product Owner, Scrum Master y equipo de desarrollo), así como cualquier recurso adicional que considere necesario el PO y que pueda contribuir a aclarar el requerimiento. Es necesario, por tanto, que antes de la reunión todos conozcan los requerimientos o historias de usuario que van a ser tratados en la misma y sólo asistan aquellos cuya presencia sea estrictamente relevante."
+
+  utter_user_story: 
+  - text: "Una historia de usuario es la unidad de trabajo más pequeña en un marco ágil. Es un objetivo final, no una función, expresado desde la perspectiva del usuario final o cliente. Representa una necesidad de negocio que puede ser implementada en un sprint y aporta valor al producto. Al final del Sprint la historia añade una nueva funcionalidad o característica al producto y puede ser candidata para pasar a producción. Estos elementos componen una Épica y, a su vez, una historia esta compuesta por tareas técnicas."
+
+  utter_epica:
+  - text: "Una Épica es un conjunto de trabajo grande que puede dividirse en historias de usuario en función de las necesidades o solicitudes de los clientes o usuarios finales. Implementar una épica suele llevar dos o más sprints."
+
+  utter_tarea:
+  - text: "Las tareas son elementos técnicos necesarios para que una Historia de Usuario se transforme en un incremento del producto. Las historias de usuario se descomponen en tareas para gestionar y seguir el avance de su ejecución. Normalmente durante la reunión de Sprint Planning, el equipo de desarrollo se identifica y genera estas tareas técnica."
+
+  utter_diseño_backlog:
+  - text: "El Product Backlog se diseña a partir de lo siguiente: \n 
+  1) En primer lugar, se definen los temas. Estos deben ser generales y cada uno de ellos puede ser parte de distintas iniciativas. Etiquetan elementos del backlog o iniciativas.\n
+  2) Se definen las iniciativas oçu objetivos comunes relacionado con un tema. Puede ser que una misma iniciativa comparta dos temas. Al final, los temas funcionan como etiquetas en cada iniciativa. \n
+  3) Se definen todas las épicas que se requieren para perseguir ese objetivo en común que hemos marcado en el tema. Este proceso lo hacemos en conjunto con los requerimientos de los clientes. En definitiva, la base principal de Scrum, es definir cada acción siempre a la par de lo que el cliente necesita y cuando lo necesita.\n
+  4) Se divide cada épica en historias de usuarios. En este paso, es fundamental la colaboración del cliente, es necesario ponerse en su lugar para adaptarse a lo que el quiere hacer, tal y como él mismo lo solicite. \n
+  5) Se dividen a su vez las historias de usuario definidas en el paso anterior en tareas o actividades para ejecutarlas. El equipo de desarrollo seguirá estas tareas, por ejemplo, en un tablero Kanban. Se seleccionan así las tareas del backlog para ese Sprint o iteración. Cada vez que el equipo de desarrollo completa una historia, se realiza un incremento al producto final."
+
+  utter_sprint_backlog:
+  - text: Este artefacto es un elemento para visualizar el trabajo a realizar durante cada Sprint y está gestionado por el equipo de desarrollo. Su propósito es mantener la transparencia dentro del desarrollo, actualizándolo durante toda la iteración especialmente a través de los daily Scrums.
+
+  utter_product_backlog: 
+  - text: "El Product Backlog es un inventario que contiene cualquier tipo de trabajo que haya que hacer en el producto: requerimientos, casos de uso, tareas y dependencias. Es la principal fuente de información sobre el producto en Scrum, una lista, en cualquier formato, que contiene todos los requerimientos que necesitamos implementar en el producto. El Product Backlog debe ser gestionado en exclusiva por el Product Owner. \n¿Querés saber como es el proceso para diseñar el Product Backlog?"

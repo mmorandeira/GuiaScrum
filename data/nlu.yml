@@ -189,17 +189,17 @@ nlu:
 
 - intent: product_backlog
   examples: |
-    - que es el [product]{"entity":"contexto", "value":"product"} backlog?
-    - para que sirve el [product]{"entity":"contexto", "value":"product"} backlog?
-    - cual es la utilidad del [product]{"entity":"contexto", "value":"product"} backlog?
-    - para que es el [product]{"entity":"contexto", "value":"product"} backlog?
+    - que es el product backlog?
+    - para que sirve el product backlog?
+    - cual es la utilidad del product backlog?
+    - para que es el product backlog?
 
-- intent: product_backlog
+- intent: sprint_backlog
   examples: |
-    - que es el [sprint]{"entity":"contexto", "value":"sprint"} backlog?
-    - para que sirve el [sprint]{"entity":"contexto", "value":"sprint"} backlog?
-    - cual es la utilidad del [sprint]{"entity":"contexto", "value":"sprint"} backlog?
-    - para que es el [sprint]{"entity":"contexto", "value":"sprint"} backlog?  
+    - que es el sprint backlog?
+    - para que sirve el sprint backlog?
+    - cual es la utilidad del sprint backlog?
+    - para que es el sprint backlog?  
 
 - intent: incremento
   examples: |
@@ -264,10 +264,47 @@ nlu:
     - para que sirve el sprint retrospective?
     - para que sirve hacer una revisión al final del sprint?
 
-- intent: grooming
+- intent: sprint_grooming
   examples: |
     - que es el grooming?
     - para que es el grooming?
     - para que se hace el sprint retrospective?
     - para que se hace el grooming?
     - para que sirve el grooming?
+
+- intent: user_story
+  examples: |
+    - que es son las user stories?
+    - que es son las historias de usuario?
+    - para que son las user stories?
+    - para que se hacen las user stories?
+    - para que se hacen las historias de usuario?
+    - para que sirve las user stories?
+    - para que sirve las historias de usuario?
+    - las user stories son epicas?
+    - las user stories son tareas tecnicas?
+
+- intent: epica
+  examples: |
+    - que son las épicas?
+    - para que son las épicas?
+    - para que se hacen las épicas?
+    - para que sirve las épicas?
+    - las epicas son historias de usuario?
+
+- intent: tarea_tecnica
+  examples: |
+    - que es son las tareas tecnicas?
+    - que es son las tareas?
+    - para que es son las tareas?
+    - para que se hacen las tareas?
+    - para que sirve las tareas?
+    - las tareas son historias de usuario?
+
+- intent: diseño_backlog
+  examples: |
+    - como se diseña un backlog?
+    - como es el proceso para diseñar el backlog?
+    - como se diseña el product backlog?
+    - como es el proceso para diseñar el product backlog?
+    - como es el proceso de diseño del backlog del product?
