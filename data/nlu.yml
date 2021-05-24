@@ -50,11 +50,11 @@ nlu:
 
 - intent: que_es_scrum
   examples: |
-    - que es [scrum](contexto)?
-    - en que consiste [scrum](contexto)?
-    - que es el proceso [scrum](contexto)?
-    - como es el proceso [scrum](contexto)?
-    - en que consiste el proceso [scrum](contexto)?
+    - que es scrum?
+    - en que consiste scrum?
+    - que es el proceso scrum?
+    - como es el proceso scrum?
+    - en que consiste el proceso scrum?
 
 - intent: roles
   examples: |
@@ -110,12 +110,16 @@ nlu:
     - de que se encarga el scrum master?
     - que hago si soy scrum master?
     - que tiene que hacer el scrum master?
-    - que hace el scrum master durante la [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hace el scrum master durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy scrum master?
     - que hace el scrum master durante la [daily meeting]{"entity":"etapa","value":"daily"}?
-    - que hace el scrum master durante la [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
-    - que hace el scrum master durante la [sprint review]{"entity":"etapa","value":"review"}?
-    - que hace el scrum master durante el [sprint]{"entity":"etapa","value":"sprint"}?
-
+    - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy scrum master?
+    - que hace el scrum master durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si soy scrum master?
+    - que hace el scrum master durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy scrum master?
+    - que hace el scrum master durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+    - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"} si soy scrum master?
 
 - intent: trabajo_product_owner
   examples: | 
@@ -124,6 +128,16 @@ nlu:
     - de que se encarga el product owner?
     - que hago si soy product owner?
     - que tiene que hacer el product owner?
+    - que hace el product owner durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy product owner?
+    - que hace el product owner durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy product owner?
+    - que hace el product owner durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si product owner?
+    - que hace el product owner durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy product owner?
+    - que hace el product owner durante el [sprint]{"entity":"etapa","value":"sprint"}?
+    - que hago durante el [sprint]{"entity":"etapa","value":"sprint"} si soy product owner?
 
 - intent: trabajo_desarrollador
   examples: | 
@@ -140,7 +154,74 @@ nlu:
     - que hago si soy estoy en el equipo de dearrollo?
     - de que me encargo si soy parte del equipo de desarrollo?
     - que hago si estoy en el equipo de desarrollo?
+    - que hace el desarrollador durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy desarrollador?
+    - que hace el equipo de desarrollo durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy parte del equipo de desarrollo?
+    - que hace el desarrollador durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy desarrollador?
+    - que hace el equipo de desarrollo durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy parte del equipo de desarrollo?
+    - que hace el desarrollador durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si desarrollador?
+    - que hace el equipo de desarrollo durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si parte del equipo de desarrollo?
+    - que hace el desarrollador durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy desarrollador?
+    - que hace el equipo de desarrollo durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy parte del equipo de desarrollo?
+    - que hace el desarrollador durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+    - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"} si soy desarrollador?
+    - que hace el equipo de desarrollo durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+    - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"} si soy parte del equipo de desarrollo?
 
+- intent: que_hacer_etapa
+  examples: |
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hago durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+    - que tengo que hacer durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que tengo que hacer durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que tengo que hacer durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que tengo que hacer durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que tengo que hacer durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+
+
+- intent: product_backlog
+  examples: |
+    - que es el [product]{"entity":"contexto", "value":"product"} backlog?
+    - para que sirve el [product]{"entity":"contexto", "value":"product"} backlog?
+    - cual es la utilidad del [product]{"entity":"contexto", "value":"product"} backlog?
+    - para que es el [product]{"entity":"contexto", "value":"product"} backlog?
+
+- intent: product_backlog
+  examples: |
+    - que es el [sprint]{"entity":"contexto", "value":"sprint"} backlog?
+    - para que sirve el [sprint]{"entity":"contexto", "value":"sprint"} backlog?
+    - cual es la utilidad del [sprint]{"entity":"contexto", "value":"sprint"} backlog?
+    - para que es el [sprint]{"entity":"contexto", "value":"sprint"} backlog?  
+
+- intent: incremento
+  examples: |
+    - que es el incremento?
+    - para que sirve el incremento?
+    - cual es la utilidad del incremento?
+    - para que es el incremento?  
+
+- intent: get_rol
+  examples: |
+    - soy [programador]{"entity":"rol", "value":"desarrollador"}
+    - soy [desarrollador]{"entity":"rol", "value":"desarrollador"}
+    - estoy en el [grupo de desarrollo]{"entity":"rol", "value":"desarrollador"}
+    - soy [scrum master]{"entity":"rol", "value":"scrum master"}
+    - soy [product owner]{"entity":"rol", "value":"product owner"}
+    - [programador]{"entity":"rol", "value":"desarrollador"}
+    - [desarrollador]{"entity":"rol", "value":"desarrollador"}
+    - [scrum master]{"entity":"rol", "value":"scrum master"}
+    - [product owner]{"entity":"rol", "value":"product owner"}
+    - [po]{"entity":"rol", "value":"product owner"}
 
 
 

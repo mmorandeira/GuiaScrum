@@ -41,9 +41,37 @@ stories:
 - story: que hace el product owner
   steps:
   - intent: trabajo_product_owner
-  - action: utter_trabajo_product_owner
+  - action: action_trabajo_product_owner
 
 - story: que hace el desarrollador
   steps:
   - intent: trabajo_desarrollador
-  - action: utter_trabajo_desarrollador
+  - action: action_trabajo_desarrollador
+
+- story: que es el product backlog
+  steps:
+  - intent: product_backlog
+  - action: action_backlog
+
+- story: que es el sprint backlog
+  steps:
+  - intent: sprint_backlog
+  - action: action_backlog
+
+- story: que es el incremento
+  steps: 
+  - intent: incremento
+  - action: utter_incremento
+
+# Probar
+- story: que hacer segun etapa y rol
+  steps:
+  - intent: que_hacer_etapa
+  - action: action_verificar_rol
+  - intent: get_rol
+  - action: action_que_hacer
+
+- story: que hacer segun la etapa
+  steps:
+  - intent: que_hacer_etapa
+  - action: action_verificar_rol

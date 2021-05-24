@@ -14,19 +14,36 @@ intents:
   - trabajo_scrum_master
   - trabajo_product_owner
   - trabajo_desarrollador
+  - product_backlog
+  - sprint_backlog
+  - incremento
+  - que_hacer_etapa
+  - get_rol
 
 entities:
-  - contexto
   - etapa
+  - contexto
+  - rol
 
 slots:
   etapa:
     type: text
-    initial_value: "None"
+    initial_value: 'None'
+  contexto:
+    type: text
+    initial_value: 'None'
+  rol:
+    type: text
+    initial_value: 'None'
 
 actions:
   - action_trabajo_scrum_master
- 
+  - action_trabajo_product_owner
+  - action_trabajo_desarrollador
+  - action_backlog
+  - action_que_hacer
+  - action_verificar_rol
+
 responses:
   utter_greet:
   - text: ¡Hola! Estoy aquí para guiarte en el proceso Scrum. ¿En qué puedo ayudarte?
@@ -57,7 +74,11 @@ responses:
   - text: "Los artefactos son los elementos que garantizan la transparencia y el registro de la información fundamental del proceso. Los principales artefactos en Scrum son: \n
   - Product Backlog: Registra y prioriza los requisitos desde el punto del vista del cliente. \n
   - Sprint Backlog: Registro de los requisitos desde el punto de vista de los desarrolladores. Es la lista de tareas que se deben realizar durante un sprint para lograr el incremento previsto. \n
-  - Incremento: Resultado de cada sprint. "
+  - Incremento: Resultado de cada sprint.
+  Otros artefactos: \n
+  - Definition of Done (DoD): La DoD es un documento que define qué se considera hecho en un equipo Scrum. \n
+  - Definition of Ready (DoR): El DoR es un documento que define cuándo un requerimiento (historia de usuario o similar) se considera listo para que el equipo de desarrollo pueda entenderlo, valorarlo e incluirlo en un Sprint Planning con idea de acometerlo en un Sprint.\n
+  - Burndown Chart: es un gráfico de trabajo pendiente a lo largo del tiempo que muestra la velocidad a la que se están completando los objetivos, requisitos, o historias de usuarios. "
 
   utter_metodologia:
   - text: Una metodología impone una serie de procesos, ceremonias, documentos, estándares, etc. Con un cierto nivel de rigidez. Mientras que un framework da una serie de pautas, roles, artefactos, ceremonias, etc que se pueden usar como guía. Por lo tanto, Scrum no es una metodología porque simplemente brinda una guia de los pasos a seguir, pero lo que funciona para un equipo no necesariamente funciona para otro. Es flexible.
@@ -72,40 +93,10 @@ responses:
   3) Inspección y adaptación: El último día de la iteración se realiza la reunión de revisión de la iteración. Tiene dos partes: \n
   3.1) Revisión (demostración) (1,5 horas). El equipo presenta al cliente los requisitos completados en la iteración, en forma de incremento de producto preparado para ser entregado con el mínimo esfuerzo. En función de los resultados mostrados y de los cambios que haya habido en el contexto del proyecto, el cliente realiza las adaptaciones necesarias de manera objetiva, ya desde la primera iteración, replanificando el proyecto. \n
   3.2) Retrospectiva (1,5 horas). El equipo analiza cómo ha sido su manera de trabajar y cuáles son los problemas que podrían impedirle progresar adecuadamente, mejorando de manera continua su productividad. El Facilitador se encargará de eliminar o escalar los obstáculos identificados que estén más allá del ámbito de acción del equipo."
-  
-  
-  utter_trabajo_scrum_master:
-  - text: "El Scrum Master es el responsable de que Scrum sea entendido y bien aplicado dentro de la organización. Trabaja junto con el Product Owner y el equipo de desarrollo en la creación de valor en cada sprint. Elimina impedimentos y ayuda a ser más productivo al Equipo de desarrollo. \n
-  En cada evento de Scrum el Scrum Master cumple el rol de facilitador, es decir, en una reunión, evento o conversación se encarga de que se cumpla el objetivo de ese espacio, que estén disponibles todos los recursos que se necesitan y que todas las voces sean escuchadas. Debe ser neutral sobre las decisiones: intervenir sobre el proceso no sobre el resultado. \n
-  1) En la planificación de la iteración: \n
-  - Trabaja en conjunto con el Product Owner en el refinamiento del Product Backlog.\n
-  - Trabaja con el Product Owner en la creación de las historias de usuario \n
-  - Interviene en caso que no quede claro el objetivo del sprint o alguna característica del producto. \n
-  2) Durante la ejecución del sprint: \n
-  - Guía al equipo de desarrollo a ser autoorganizado y multifuncional.\n
-  - Remueve impedimentos que pueda tener el equipo de desarrollo durante la ejecución.\n
-  - Facilita eventos de Scrum o espacios de conversación que se requieran durante la etapa. Como por ejemplo las Daily Meetings. \n
-  - Interviene en la Daily Scrum si no se están visibilizando realmente los impedimentos.\n
-  - Ayuda al equipo con la creación y actualización de un Burndown Chart que le permita transparentar el Sprint en curso, inspeccionar y adaptarse. \n
-  - Ayuda al equipo en la preparación de una demo para presentar a los Stakeholders. \n
-  - Maneja un backlog de impedimentos visible para todo el equipo. \n
-  3) Durante las etapas de revisión y retrospectiva del sprint debe: \n
-  - Organizar una agenda en conjunto con el Product Owner para los diversos Stakeholders. \n
-  - Hacer preguntas a Stakeholders que permitan recibir feedback de valor al equipo. \n
-  - Facilitar la retrospectiva e intervenir mediante preguntas que generen reflexión y perspectiva.\n
-  - Intervenir en la Retrospectiva si se está finalizando sin medidas accionables."
-  
-  utter_trabajo_scrum_master_planificacion:
-  - text: "- Trabaja en conjunto con el Product Owner en el refinamiento del Product Backlog.\n
-- Trabaja con el Product Owner en la creación de las historias de usuario \n
-- Interviene en caso que no quede claro el objetivo del sprint o alguna característica del producto. \n etapa: {etapa}"
-  
-  utter_trabajo_scrum_master_daily:
-  - text: "- Se encarga de que se cumpla el objetivo de la reunión, que estén disponibles todos los recursos que se necesitan y que todas las voces sean escuchadas. \n
-  - Interviene si considera que no se están visibilizando realmente los impedimentos. \n etapa: {etapa}"
 
-  utter_trabajo_product_owner:
-  - text: ""
+  utter_incremento: 
+  - text: Un Incremento es el resultado del Sprint, es la suma de todas las tareas, casos de uso, historias de usuario y cualquier elemento que se haya desarrollado durante el Sprint y que será puesto a disposición del usuario final en forma de software, aportando un valor de negocio al producto que se está desarrollando.
 
-  utter_trabajo_desarrollador:
-  - text: ""
+  utter_ask_rol:
+  - text: ¿Cuál es tu rol?
+  - text: ¿Me podrías decir tu rol?
