@@ -88,8 +88,6 @@ nlu:
 
 - intent: proceso_scrum
   examples: |
-    - cuales son los eventos?
-    - que eventos hay en scrum?
     - como funciona el proceso?
     - como es el proceso scrum?
     - que se hace en el proceso scrum?
@@ -136,8 +134,8 @@ nlu:
     - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si product owner?
     - que hace el product owner durante el [sprint review]{"entity":"etapa","value":"review"}?
     - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy product owner?
-    - que hace el product owner durante el [sprint]{"entity":"etapa","value":"sprint"}?
-    - que hago durante el [sprint]{"entity":"etapa","value":"sprint"} si soy product owner?
+    - que hace el product owner durante la ejecución [sprint]{"entity":"etapa","value":"sprint"}?
+    - que hago durante la ejecución [sprint]{"entity":"etapa","value":"sprint"} si soy product owner?
 
 - intent: trabajo_desarrollador
   examples: | 
@@ -223,5 +221,53 @@ nlu:
     - [product owner]{"entity":"rol", "value":"product owner"}
     - [po]{"entity":"rol", "value":"product owner"}
 
+- intent: eventos
+  examples: |
+    - cuales son los eventos?
+    - que eventos hay en scrum?
+    - cuales son las ceremonias en scrum?
+    - que ceremonias hay en scrum?
+    - que eventos o ceremonias hay?
+    - para que son los eventos?
+    - para que son las ceremonias?
 
+- intent: sprint_planning
+  examples: |
+    - que es el sprint planning?
+    - para que es el sprint planning?
+    - para que se hace el sprint planning?
+    - para que sirve el sprint planning?
+    - para que se planifica el sprint?
 
+- intent: daily_meeting
+  examples: |
+    - que es la daily meeting?
+    - que es la daily scrum?
+    - para que es la daily scrum?
+    - para que se hace la daily meeting?
+    - para que se hace la daily scrum?
+    - para que sirve la daily meeting?
+
+- intent: sprint_review
+  examples: |
+    - que es el sprint review?
+    - para que es el sprint review?
+    - para que se hace el sprint review?
+    - para que sirve el sprint review?
+    - para que sirve hacer una retrospectiva al final del sprint?
+
+- intent: sprint_retrospective
+  examples: |
+    - que es el sprint retrospective?
+    - para que es el sprint retrospective?
+    - para que se hace el sprint retrospective?
+    - para que sirve el sprint retrospective?
+    - para que sirve hacer una revisión al final del sprint?
+
+- intent: grooming
+  examples: |
+    - que es el grooming?
+    - para que es el grooming?
+    - para que se hace el sprint retrospective?
+    - para que se hace el grooming?
+    - para que sirve el grooming?

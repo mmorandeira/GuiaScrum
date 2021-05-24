@@ -88,9 +88,11 @@ class ActionTrabajoDesarrollador(Action):
         return [SlotSet('etapa', 'None')]
 
 class ActionBacklog(Action):
+
     '''
         Esta acción se hizo porque al entrenar el modelo se confundia sprint backlog con product backlog
     '''
+
     def name(self) -> Text:
         return "action_backlog"
 
@@ -126,10 +128,12 @@ class ActionPrueba(Action):
         else:
             dispatcher.utter_message('El rol ingresado no es válido')
 
-class ActionPrueba(Action):
+class ActionVerificarRol(Action):
+
     '''
-        Esta acción verifica si ya tiene el rol del usuario, sino se lo pide
+        Esta acción verifica si se tiene el rol del usuario, sino se lo solicita
     '''
+
     def name(self) -> Text:
         return "action_verificar_rol"
 

@@ -63,7 +63,6 @@ stories:
   - intent: incremento
   - action: utter_incremento
 
-# Probar
 - story: que hacer segun etapa y rol
   steps:
   - intent: que_hacer_etapa
@@ -75,3 +74,34 @@ stories:
   steps:
   - intent: que_hacer_etapa
   - action: action_verificar_rol
+
+# probar y hacer utters
+- story: eventos
+  steps: 
+  - intent: eventos
+  - action: utter_eventos
+
+- story: sprint planning
+  steps:
+  - intent: sprint_planning
+  - action: utter_sprint_planning
+
+- story: daily meeting
+  steps:
+  - intent: daily_meeting
+  - action: utter_daily_meeting
+
+- story: sprint review
+  steps: 
+  - intent: sprint_review
+  - action: utter_sprint_review
+
+- story: sprint retrospective
+  steps:
+  - intent: sprint_retrospective
+  - action: utter_sprint_retrospective
+
+- story: grooming
+  steps:
+  - intent: grooming
+  - action: utter_grooming

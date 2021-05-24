@@ -19,6 +19,12 @@ intents:
   - incremento
   - que_hacer_etapa
   - get_rol
+  - eventos
+  - sprint_planning
+  - daily_meeting
+  - sprint_review
+  - sprint_retrospective
+  - grooming
 
 entities:
   - etapa
@@ -97,6 +103,26 @@ responses:
   utter_incremento: 
   - text: Un Incremento es el resultado del Sprint, es la suma de todas las tareas, casos de uso, historias de usuario y cualquier elemento que se haya desarrollado durante el Sprint y que será puesto a disposición del usuario final en forma de software, aportando un valor de negocio al producto que se está desarrollando.
 
-  utter_ask_rol:
-  - text: ¿Cuál es tu rol?
-  - text: ¿Me podrías decir tu rol?
+  utter_eventos:
+  - text: "Scrum define cinco eventos o ceremonias principales para cumplir con el control de sus procesos. Dentro de un Sprint (periodo mínimo en que un equipo de desarrollo puede generar valor a través de un incremento determinado) se encuentran los siguientes eventos: \n
+  1) El Sprint Planning al comienzo del Sprint. Sirve para inspeccionar el Backlog del Producto (Product Backlog ) y que el equipo de desarrollo seleccione los Product Backlog Items en los que va a trabajar durante el siguiente Sprint. \n
+  2) Daily Scrums a diario. Es una reunión diaria de 15 minutos en la que participa exclusivamente el Development Team. \n
+  3) Un Sprint Review al final del Sprint para inspeccionar el incremento realizado. \n
+  4) Y, finalmente, una Retrospectiva para inspeccionar el equipo y levantar mejoras que se apliquen en el siguiente Sprint. \n
+  5) Adicionalmente se ha incorporado también una reunión de Grooming o Refinement, que sirve para, dentro del Sprint, afinar y aclarar ciertas historias de usuario que pudieron quedar pendientes durante el Sprint Planning. \n
+  Todo ocurre en un solo Sprint y en cada Sprint y es el product owner quien decide dónde y a qué dedicar los recursos."
+
+  utter_sprint_planning:
+  - text: 
+  
+  utter_daily_meeting:
+  - text:
+
+  utter_sprint_review:
+  - text: 
+  
+  utter_sprint_retrospective:
+  - text:
+  
+  utter_grooming:
+  - text:
