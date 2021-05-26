@@ -85,6 +85,7 @@ nlu:
     - no es una metodologia?
     - entonces que es una metodologia?
     - que es una metodologia?
+    - porque no es una metodologia?
 
 - intent: proceso_scrum
   examples: |
@@ -177,6 +178,7 @@ nlu:
   examples: |
     - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que tengo que hacer en las [daily meetings]{"entity":"etapa","value":"daily"}?
     - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
     - que hago durante el [sprint review]{"entity":"etapa","value":"review"}?
     - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
@@ -193,6 +195,10 @@ nlu:
     - para que sirve el product backlog?
     - cual es la utilidad del product backlog?
     - para que es el product backlog?
+    - me podrias dar mas información sobre el product backlog?
+    - me das mas información sobre el product backlog?
+    - me das mas detalles sobre el product backlog?
+    - no entendi bien el product backlog
 
 - intent: sprint_backlog
   examples: |

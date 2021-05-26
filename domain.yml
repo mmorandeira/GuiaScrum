@@ -62,9 +62,9 @@ responses:
   utter_que_es_scrum:
   - text: "Scrum es un framework que define un conjunto de eventos, prácticas y roles, y que puede tomarse como conjunto base para definir el proceso de producción que usará un equipo de trabajo o dentro de un proyecto. 
   Cabe aclarar que un framework es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.
-  Es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo y obtener el mejor resultado posible de proyectos, caracterizado por: /n
-  - Adoptar una estrategia de desarrollo incremental, en lugar de la planificación y ejecución completa del producto.
-  - Basar la calidad del resultado más en el conocimiento tácito de las personas en equipos auto organizados, que en la calidad de los procesos empleados.
+  Es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo y obtener el mejor resultado posible de proyectos, caracterizado por: \n
+  - Adoptar una estrategia de desarrollo incremental, en lugar de la planificación y ejecución completa del producto. \n
+  - Basar la calidad del resultado más en el conocimiento tácito de las personas en equipos auto organizados, que en la calidad de los procesos empleados. \n
   - Solapar las diferentes fases del desarrollo, en lugar de realizar una tras otra en un ciclo secuencial o en cascada."
   
   utter_roles:
@@ -79,7 +79,7 @@ responses:
   - text: "Los artefactos son los elementos que garantizan la transparencia y el registro de la información fundamental del proceso. Los principales artefactos en Scrum son: \n
   - Product Backlog: Registra y prioriza los requisitos desde el punto del vista del cliente. \n
   - Sprint Backlog: Registro de los requisitos desde el punto de vista de los desarrolladores. Es la lista de tareas que se deben realizar durante un sprint para lograr el incremento previsto. \n
-  - Incremento: Resultado de cada sprint.
+  - Incremento: Resultado de cada sprint. \n
   Otros artefactos: \n
   - Definition of Done (DoD): La DoD es un documento que define qué se considera hecho en un equipo Scrum. \n
   - Definition of Ready (DoR): El DoR es un documento que define cuándo un requerimiento (historia de usuario o similar) se considera listo para que el equipo de desarrollo pueda entenderlo, valorarlo e incluirlo en un Sprint Planning con idea de acometerlo en un Sprint.\n
@@ -150,7 +150,7 @@ responses:
   - text: "Las tareas son elementos técnicos necesarios para que una Historia de Usuario se transforme en un incremento del producto. Las historias de usuario se descomponen en tareas para gestionar y seguir el avance de su ejecución. Normalmente durante la reunión de Sprint Planning, el equipo de desarrollo se identifica y genera estas tareas técnica."
 
   utter_diseño_backlog:
-  - text: "El Product Backlog se diseña a partir de lo siguiente: \n 
+  - text: "Para el diseño del backlog se siguen lo siguientes pasos: \n 
   1) En primer lugar, se definen los temas. Estos deben ser generales y cada uno de ellos puede ser parte de distintas iniciativas. Etiquetan elementos del backlog o iniciativas.\n
   2) Se definen las iniciativas oçu objetivos comunes relacionado con un tema. Puede ser que una misma iniciativa comparta dos temas. Al final, los temas funcionan como etiquetas en cada iniciativa. \n
   3) Se definen todas las épicas que se requieren para perseguir ese objetivo en común que hemos marcado en el tema. Este proceso lo hacemos en conjunto con los requerimientos de los clientes. En definitiva, la base principal de Scrum, es definir cada acción siempre a la par de lo que el cliente necesita y cuando lo necesita.\n
