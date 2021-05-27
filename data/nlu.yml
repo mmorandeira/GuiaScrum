@@ -64,6 +64,14 @@ nlu:
     - que roles intervienen?
     - para que sirven los roles?
 
+- intent: scrum_team
+  examples: |
+    - que es el scrum team?
+    - a que te referis con scrum team?
+    - me podes repetir que es el scrum team?
+    - no entendi que es el scrum team
+    - que seria el scrum team?
+
 - intent: artefactos
   examples: |
     - que son los artefactos?
@@ -109,8 +117,8 @@ nlu:
     - de que se encarga el scrum master?
     - que hago si soy scrum master?
     - que tiene que hacer el scrum master?
-    - que hace el scrum master durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
-    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy scrum master?
+    - que hace el scrum master durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"} si soy scrum master?
     - que hace el scrum master durante la [daily meeting]{"entity":"etapa","value":"daily"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy scrum master?
     - que hace el scrum master durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
@@ -127,8 +135,8 @@ nlu:
     - de que se encarga el product owner?
     - que hago si soy product owner?
     - que tiene que hacer el product owner?
-    - que hace el product owner durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
-    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy product owner?
+    - que hace el product owner durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"} si soy product owner?
     - que hace el product owner durante la [daily meeting]{"entity":"etapa","value":"daily"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy product owner?
     - que hace el product owner durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
@@ -153,10 +161,10 @@ nlu:
     - que hago si soy estoy en el equipo de dearrollo?
     - de que me encargo si soy parte del equipo de desarrollo?
     - que hago si estoy en el equipo de desarrollo?
-    - que hace el desarrollador durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
-    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy desarrollador?
-    - que hace el equipo de desarrollo durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
-    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"} si soy parte del equipo de desarrollo?
+    - que hace el desarrollador durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"} si soy desarrollador?
+    - que hace el equipo de desarrollo durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"} si soy parte del equipo de desarrollo?
     - que hace el desarrollador durante la [daily meeting]{"entity":"etapa","value":"daily"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy desarrollador?
     - que hace el equipo de desarrollo durante la [daily meeting]{"entity":"etapa","value":"daily"}?
@@ -176,18 +184,34 @@ nlu:
 
 - intent: que_hacer_etapa
   examples: |
-    - que hago durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"}?
     - que tengo que hacer en las [daily meetings]{"entity":"etapa","value":"daily"}?
     - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
     - que hago durante el [sprint review]{"entity":"etapa","value":"review"}?
     - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
-    - que tengo que hacer durante el [sprint planning]{"entity":"etapa","value":"planificacion"}?
+    - que tengo que hacer durante el [sprint planning]{"entity":"etapa","value":"planning"}?
     - que tengo que hacer durante la [daily meeting]{"entity":"etapa","value":"daily"}?
     - que tengo que hacer durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
     - que tengo que hacer durante el [sprint review]{"entity":"etapa","value":"review"}?
     - que tengo que hacer durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
-
+    - que debo hacer durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que tengo que hacer en la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que debo hacer en la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hago en la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hago en la [daily]{"entity":"etapa","value":"daily"}?
+    - que tengo que hacer en la [daily]{"entity":"etapa","value":"daily"}?
+    - que debo hacer durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que debo hacer durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que debo hacer durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+    - que tendria que hacer durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que tendria que hacer durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que tendria que hacer en la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que tendria que hacer durante la [daily]{"entity":"etapa","value":"daily"}?
+    - que tendria que hacer en la [daily]{"entity":"etapa","value":"daily"}?
+    - que tendria que hacer durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que tendria que hacer durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que tendria que hacer durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
 
 - intent: product_backlog
   examples: |
@@ -199,6 +223,8 @@ nlu:
     - me das mas información sobre el product backlog?
     - me das mas detalles sobre el product backlog?
     - no entendi bien el product backlog
+    - no entendi que es el sprint backlog
+    - me podes repetir lo que es el product backlog?
 
 - intent: sprint_backlog
   examples: |
@@ -206,6 +232,13 @@ nlu:
     - para que sirve el sprint backlog?
     - cual es la utilidad del sprint backlog?
     - para que es el sprint backlog?  
+    - me podrias dar mas información sobre el sprint backlog?
+    - me das mas información sobre el sprint backlog?
+    - me das mas detalles sobre el sprint backlog?
+    - no entendi bien el sprint backlog
+    - no entendi que es el sprint backlog
+    - me podes repetir lo que es el sprint backlog?
+
 
 - intent: incremento
   examples: |
@@ -213,6 +246,12 @@ nlu:
     - para que sirve el incremento?
     - cual es la utilidad del incremento?
     - para que es el incremento?  
+    - me podrias dar mas información sobre el incremento?
+    - me das mas información sobre el incremento?
+    - me das mas detalles sobre el incremento?
+    - no entendi bien el incremento
+    - no entendi que es el incremento
+    - me podes repetir lo que es el incremento?
 
 - intent: get_rol
   examples: |
@@ -244,6 +283,11 @@ nlu:
     - para que se hace el sprint planning?
     - para que sirve el sprint planning?
     - para que se planifica el sprint?
+    - me das mas información sobre el sprint planning?
+    - me das mas detalles sobre el sprint planning?
+    - no entendi bien el sprint planning
+    - no entendi que es el sprint planning
+    - me podes repetir lo que es el sprint planning?
 
 - intent: daily_meeting
   examples: |
@@ -253,6 +297,11 @@ nlu:
     - para que se hace la daily meeting?
     - para que se hace la daily scrum?
     - para que sirve la daily meeting?
+    - me das mas información sobre la daily meeting?
+    - me das mas detalles sobre la daily meeting?
+    - no entendi bien la daily meeting
+    - no entendi que es la daily meeting
+    - me podes repetir lo que es la daily meeting?
 
 - intent: sprint_review
   examples: |
@@ -261,6 +310,11 @@ nlu:
     - para que se hace el sprint review?
     - para que sirve el sprint review?
     - para que sirve hacer una retrospectiva al final del sprint?
+    - me das mas información sobre el sprint review?
+    - me das mas detalles sobre el sprint review?
+    - no entendi bien el sprint review
+    - no entendi que es el sprint review
+    - me podes repetir lo que es el sprint review?
 
 - intent: sprint_retrospective
   examples: |
@@ -269,14 +323,25 @@ nlu:
     - para que se hace el sprint retrospective?
     - para que sirve el sprint retrospective?
     - para que sirve hacer una revisión al final del sprint?
+    - me das mas información sobre el sprint retrospective?
+    - me das mas detalles sobre el sprint retrospective?
+    - no entendi bien el sprint retrospective
+    - no entendi que es el sprint retrospective
+    - me podes repetir lo que es el sprint retrospective?
+
 
 - intent: sprint_grooming
   examples: |
     - que es el grooming?
     - para que es el grooming?
-    - para que se hace el sprint retrospective?
+    - para que se hace el grooming?
     - para que se hace el grooming?
     - para que sirve el grooming?
+    - me das mas información sobre el grooming?
+    - me das mas detalles sobre el grooming?
+    - no entendi bien el grooming
+    - no entendi que es el grooming
+    - me podes repetir lo que es el grooming?
 
 - intent: user_story
   examples: |
@@ -314,3 +379,114 @@ nlu:
     - como se diseña el product backlog?
     - como es el proceso para diseñar el product backlog?
     - como es el proceso de diseño del backlog del product?
+
+- intent: repetir_que_es_scrum
+  examples: |
+    - me podes repetir la definicion de scrum?
+    - me podes dar otra definicion de scrum?
+    - me podes repetir que es scrum?
+    - me podes dar mas detalles de que es scrum?
+
+- intent: repetir_roles
+  examples: |
+    - no entendi bien los roles
+    - no entendi los roles?
+    - me podes repetir que serian los roles?
+    - me podes dar mas detalles sobre los roles?
+
+- intent: repetir_artefactos
+  examples: | 
+    - me podrias repetir los artefactos?
+    - no entendi que serian los artefactos? 
+    - me podes repetir la definicion de artefactos?
+    - me podes dar otra definicion de artefactos?
+
+- intent: repetir_eventos
+  examples: | 
+    - me podrias repetir los eventos?
+    - no entendi que serian los eventos? 
+    - me podes repetir la definicion de eventos?
+    - me podes dar otra definicion de eventos?
+    - me das mas información sobre los eventos?
+    - me podrias ofrecer mas detalles sobre los eventos?
+    
+############# probar ####################
+- intent: no_entiendo
+  examples: |
+    - no entendi 
+    - me podes explicar devuelta
+    - no entiendo
+    - repeti el tema
+    - no comprendo
+    - explicame eso devuelta
+    - no entendi que es [scrum]{"entity":"tema", "value":"scrum"}
+    - no entendi la definicion de [scrum]{"entity":"tema", "value":"scrum"}
+    - no entendi que seria [scrum]{"entity":"tema", "value":"scrum"}
+    - no entendi los [roles]{"entity":"tema", "value":"roles"}
+    - no entendi la definicion de [scrum master]{"entity":"tema", "value":"scrum master"}
+    - no entendi lo que hace el [scrum master]{"entity":"tema", "value":"scrum master"}
+    - no entendi la funcion del [scrum master]{"entity":"tema", "value":"scrum master"}
+    - no entendi la definicion de [product owner]{"entity":"tema", "value":"product owner"}
+    - no entendi la funcion del [product owner]{"entity":"tema", "value":"product owner"}
+    - no entendi lo que hace el [product owner]{"entity":"tema", "value":"product owner"}
+    - no entendi la definicion de [desarrollador]{"entity":"tema", "value":"desarrollador"}
+    - no entendi lo que hace el [equipo de desarrollo]{"entity":"tema", "value":"desarrollador"}
+    - no entendi la funcion del [equipo de desarrollo]{"entity":"tema", "value":"desarrollador"}
+    - no entendi los [artefactos]{"entity":"tema", "value":"artefactos"}
+    - no entendi que es el [product backlog]{"entity":"tema", "value":"product backlog"}
+    - no entendi que es el [sprint backlog]{"entity":"tema", "value":"sprint backlog"}
+    - no entendi que es el [incremento]{"entity":"tema", "value":"incremento"}
+    - no entendi que es el [sprint]{"entity":"tema", "value":"sprint"}
+    - no entendi que son los [eventos]{"entity":"tema", "value":"eventos"}
+    - no entendi que es el [sprint planning]{"entity":"tema", "value":"planning"}
+    - no entendi que es el [planning]{"entity":"tema", "value":"planning"}
+    - no entendi que es la [daily meeting]{"entity":"tema", "value":"daily"}
+    - no entendi que es la [daily]{"entity":"tema", "value":"daily"}
+    - no entendi que es la [daily scrum]{"entity":"tema", "value":"daily"}
+    - no entendi que es el [sprint review]{"entity":"tema", "value":"review"}
+    - no entendi que es la [revision]{"entity":"tema", "value":"review"} 
+    - no entendi que es el [sprint retrospective]{"entity":"tema", "value":"retrospective"}
+    - no entendi que es la [retrospectiva]{"entity":"tema", "value":"retrospective"}
+    - no entendi que es el [grooming]{"entity":"tema", "value":"grooming"}
+    - no entendi el [grooming]{"entity":"tema", "value":"grooming"}
+    - no entendi que son las [user stories]{"entity":"tema", "value":"user stories"}
+    - no entendi que son las [historias de usuario]{"entity":"tema", "value":"user stories"}
+    - no entendi que son las [epicas]{"entity":"tema", "value":"epicas"}
+    - no entendi que son las [tareas tecnicas]{"entity":"tema", "value":"tareas tecnicas"}
+
+- intent: get_tema
+  examples: |
+    - que es [scrum]{"entity":"tema", "value":"scrum"}
+    - la definicion de [scrum]{"entity":"tema", "value":"scrum"}
+    - que seria [scrum]{"entity":"tema", "value":"scrum"}
+    - los [roles]{"entity":"tema", "value":"roles"}
+    - la definicion de [scrum master]{"entity":"tema", "value":"scrum master"}
+    - lo que hace el [scrum master]{"entity":"tema", "value":"scrum master"}
+    - la funcion del [scrum master]{"entity":"tema", "value":"scrum master"}
+    - la definicion de [product owner]{"entity":"tema", "value":"product owner"}
+    - la funcion del [product owner]{"entity":"tema", "value":"product owner"}
+    - lo que hace el [product owner]{"entity":"tema", "value":"product owner"}
+    - la definicion de [desarrollador]{"entity":"tema", "value":"desarrollador"}
+    - lo que hace el [equipo de desarrollo]{"entity":"tema", "value":"desarrollador"}
+    - la funcion del [equipo de desarrollo]{"entity":"tema", "value":"desarrollador"}
+    - los [artefactos]{"entity":"tema", "value":"artefactos"}
+    - el [product backlog]{"entity":"tema", "value":"product backlog"}
+    - el [sprint backlog]{"entity":"tema", "value":"sprint backlog"}
+    - el [incremento]{"entity":"tema", "value":"incremento"}
+    - el [sprint]{"entity":"tema", "value":"sprint"}
+    - los [eventos]{"entity":"tema", "value":"eventos"}
+    - el [sprint planning]{"entity":"tema", "value":"planning"}
+    - el [planning]{"entity":"tema", "value":"planning"}
+    - la [daily meeting]{"entity":"tema", "value":"daily"}
+    - la [daily]{"entity":"tema", "value":"daily"}
+    - la [daily scrum]{"entity":"tema", "value":"daily"}
+    - el [sprint review]{"entity":"tema", "value":"review"}
+    - la [revision]{"entity":"tema", "value":"review"} 
+    - el [sprint retrospective]{"entity":"tema", "value":"retrospective"}
+    - la [retrospectiva]{"entity":"tema", "value":"retrospective"}
+    - el [grooming]{"entity":"tema", "value":"grooming"}
+    - que es el [grooming]{"entity":"tema", "value":"grooming"}
+    - las [user stories]{"entity":"tema", "value":"user stories"}
+    - las [historias de usuario]{"entity":"tema", "value":"user stories"}
+    - las [epicas]{"entity":"tema", "value":"epicas"}
+    - las [tareas tecnicas]{"entity":"tema", "value":"tareas tecnicas"}
