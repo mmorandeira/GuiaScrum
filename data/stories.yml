@@ -18,6 +18,11 @@ stories:
   - intent: es_una_metodologia
   - action: utter_metodologia
 
+- story: teoria scrum
+  steps:
+  - intent: teoria_scrum
+  - action: utter_teoria_scrum
+
 - story: roles
   steps:
   - intent: roles

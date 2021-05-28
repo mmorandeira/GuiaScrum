@@ -72,6 +72,13 @@ nlu:
     - no entendi que es el scrum team
     - que seria el scrum team?
 
+- intent: teoria_scrum
+  examples: |
+    - en que se basa scrum?
+    - teoria de scrum? 
+    - en que se basa?
+    - en que esta basado?
+
 - intent: artefactos
   examples: |
     - que son los artefactos?
