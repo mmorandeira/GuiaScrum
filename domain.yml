@@ -36,6 +36,7 @@ intents:
   - repetir_eventos
   - no_entiendo
   - get_tema
+  - teoria_scrum
 
 entities:
   - etapa
