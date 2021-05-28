@@ -1,0 +1,10 @@
+/models
+/.vscode
+/events.db
+/events.db-shm
+/events.db-wal
+/rasa.db 
+/credentials.yml
+/_pycache_
+.dot
+.idea/
