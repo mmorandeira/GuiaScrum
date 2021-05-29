@@ -25,6 +25,9 @@ nlu:
     - chau
     - hasta la próxima
     - bye
+    - gracias por la explicación chau
+    - gracias adios
+    - gracias ya entendi, chau
 
 - intent: affirm
   examples: |
@@ -125,15 +128,21 @@ nlu:
     - que hago si soy scrum master?
     - que tiene que hacer el scrum master?
     - que hace el scrum master durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que hace el scrum master en el [sprint planning]{"entity":"etapa","value":"planning"}?
     - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"} si soy scrum master?
     - que hace el scrum master durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hace el scrum master en la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hace el scrum master en la [daily scrum]{"entity":"etapa","value":"daily"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy scrum master?
     - que hace el scrum master durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hace el scrum master en el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
     - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si soy scrum master?
     - que hace el scrum master durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hace el scrum master en el [sprint review]{"entity":"etapa","value":"review"}?
     - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy scrum master?
     - que hace el scrum master durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
     - que hago durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"} si soy scrum master?
+    - que hago en la ejecución del [sprint]{"entity":"etapa","value":"sprint"} si soy scrum master?
 
 - intent: trabajo_product_owner
   examples: | 
@@ -143,12 +152,18 @@ nlu:
     - que hago si soy product owner?
     - que tiene que hacer el product owner?
     - que hace el product owner durante el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - que hace el product owner en el [sprint planning]{"entity":"etapa","value":"planning"}?
     - que hago durante el [sprint planning]{"entity":"etapa","value":"planning"} si soy product owner?
     - que hace el product owner durante la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hace el product owner en la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que hace el product owner durante la [daily scrum]{"entity":"etapa","value":"daily"}?
+    - que hace el product owner en la [daily scrum]{"entity":"etapa","value":"daily"}?
     - que hago durante la [daily meeting]{"entity":"etapa","value":"daily"} si soy product owner?
     - que hace el product owner durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - que hace el product owner en el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
     - que hago durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"} si product owner?
     - que hace el product owner durante el [sprint review]{"entity":"etapa","value":"review"}?
+    - que hace el product owner en el [sprint review]{"entity":"etapa","value":"review"}?
     - que hago durante el [sprint review]{"entity":"etapa","value":"review"} si soy product owner?
     - que hace el product owner durante la ejecución [sprint]{"entity":"etapa","value":"sprint"}?
     - que hago durante la ejecución [sprint]{"entity":"etapa","value":"sprint"} si soy product owner?
@@ -246,7 +261,6 @@ nlu:
     - no entendi que es el sprint backlog
     - me podes repetir lo que es el sprint backlog?
 
-
 - intent: incremento
   examples: |
     - que es el incremento?
@@ -259,6 +273,28 @@ nlu:
     - no entendi bien el incremento
     - no entendi que es el incremento
     - me podes repetir lo que es el incremento?
+
+- intent: scrum_board
+  examples: |
+    - donde puedo visualizar el product backlog?
+    - donde puedo ver el product backlog?
+    - donde puedo visualizar el sprint backlog?
+    - donde puedo ver el sprint backlog?
+    - donde puedo visualizar el progreso del sprint?
+    - donde puedo ver el progreso del sprint?
+    - donde puedo visualizar el progreso de las tareas?
+    - donde puedo ver el progreso del proyecto?
+    - donde puedo visualizar el backlog?
+    - donde puedo ver el backlog?
+    - donde puedo ver el product backlog o el sprint backlog?  
+
+- intent: diseño_scrum_board
+  examples: |
+    - como se diseña el scrum board?
+    - como se diseña?
+    - como se realiza el scrum board?
+    - como se realiza el tablero scrum?
+    - como se hace el scrum board?
 
 - intent: get_rol
   examples: |
@@ -416,8 +452,7 @@ nlu:
     - me podes dar otra definicion de eventos?
     - me das mas información sobre los eventos?
     - me podrias ofrecer mas detalles sobre los eventos?
-    
-############# probar ####################
+
 - intent: no_entiendo
   examples: |
     - no entendi 
@@ -460,6 +495,41 @@ nlu:
     - no entendi que son las [historias de usuario]{"entity":"tema", "value":"user stories"}
     - no entendi que son las [epicas]{"entity":"tema", "value":"epicas"}
     - no entendi que son las [tareas tecnicas]{"entity":"tema", "value":"tareas tecnicas"}
+    - me podes repetir que es [scrum]{"entity":"tema", "value":"scrum"}
+    - me podes repetir la definicion de [scrum]{"entity":"tema", "value":"scrum"}
+    - me podes repetir que seria [scrum]{"entity":"tema", "value":"scrum"}
+    - me podes repetir los [roles]{"entity":"tema", "value":"roles"}
+    - me podes repetir la definicion de [scrum master]{"entity":"tema", "value":"scrum master"}
+    - me podes repetir lo que hace el [scrum master]{"entity":"tema", "value":"scrum master"}
+    - me podes repetir la funcion del [scrum master]{"entity":"tema", "value":"scrum master"}
+    - me podes repetir la definicion de [product owner]{"entity":"tema", "value":"product owner"}
+    - me podes repetir la funcion del [product owner]{"entity":"tema", "value":"product owner"}
+    - me podes repetir lo que hace el [product owner]{"entity":"tema", "value":"product owner"}
+    - me podes repetir la definicion de [desarrollador]{"entity":"tema", "value":"desarrollador"}
+    - me podes repetir lo que hace el [equipo de desarrollo]{"entity":"tema", "value":"desarrollador"}
+    - me podes repetir la funcion del [equipo de desarrollo]{"entity":"tema", "value":"desarrollador"}
+    - me podes repetir los [artefactos]{"entity":"tema", "value":"artefactos"}
+    - me podes repetir que es el [product backlog]{"entity":"tema", "value":"product backlog"}
+    - me podes repetir que es el [sprint backlog]{"entity":"tema", "value":"sprint backlog"}
+    - me podes repetir que es el [incremento]{"entity":"tema", "value":"incremento"}
+    - me podes repetir que es el [sprint]{"entity":"tema", "value":"sprint"}
+    - me podes repetir que son los [eventos]{"entity":"tema", "value":"eventos"}
+    - me podes repetir que es el [sprint planning]{"entity":"tema", "value":"planning"}
+    - me podes repetir que es el [planning]{"entity":"tema", "value":"planning"}
+    - me podes repetir que es la [daily meeting]{"entity":"tema", "value":"daily"}
+    - me podes repetir que es la [daily]{"entity":"tema", "value":"daily"}
+    - me podes repetir que es la [daily scrum]{"entity":"tema", "value":"daily"}
+    - me podes repetir que es el [sprint review]{"entity":"tema", "value":"review"}
+    - me podes repetir que es la [revision]{"entity":"tema", "value":"review"} 
+    - me podes repetir que es el [sprint retrospective]{"entity":"tema", "value":"retrospective"}
+    - me podes repetir que es la [retrospectiva]{"entity":"tema", "value":"retrospective"}
+    - me podes repetir que es el [grooming]{"entity":"tema", "value":"grooming"}
+    - me podes repetir el [grooming]{"entity":"tema", "value":"grooming"}
+    - me podes repetir que son las [user stories]{"entity":"tema", "value":"user stories"}
+    - me podes repetir que son las [historias de usuario]{"entity":"tema", "value":"user stories"}
+    - me podes repetir que son las [epicas]{"entity":"tema", "value":"epicas"}
+    - me podes repetir que son las [tareas tecnicas]{"entity":"tema", "value":"tareas tecnicas"}
+
 
 - intent: get_tema
   examples: |

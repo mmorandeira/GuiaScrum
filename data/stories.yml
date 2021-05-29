@@ -143,6 +143,13 @@ stories:
   - intent: scrum_team
   - action: utter_scrum_team
 
+- story: scrum board
+  steps: 
+  - intent: scrum_board
+  - action: utter_scrum_board
+  - intent: diseño_scrum_board
+  - action: utter_diseño_board
+
 # Mecanismo de repregunta
 - story: repetir definición de scrum
   steps: 
