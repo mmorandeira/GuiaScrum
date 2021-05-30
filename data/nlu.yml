@@ -33,6 +33,7 @@ nlu:
   examples: |
     - sí
     - si
+    - dale
     - por supuesto
     - suena bien
     - correcto
@@ -245,8 +246,8 @@ nlu:
     - me das mas información sobre el product backlog?
     - me das mas detalles sobre el product backlog?
     - no entendi bien el product backlog
-    - no entendi que es el sprint backlog
-    - me podes repetir lo que es el product backlog?
+    - no entendi que es el product backlog
+    - me podes repetir que es el product backlog?
 
 - intent: sprint_backlog
   examples: |
@@ -259,7 +260,7 @@ nlu:
     - me das mas detalles sobre el sprint backlog?
     - no entendi bien el sprint backlog
     - no entendi que es el sprint backlog
-    - me podes repetir lo que es el sprint backlog?
+    - me podes repetir que es el sprint backlog?
 
 - intent: incremento
   examples: |
@@ -287,6 +288,10 @@ nlu:
     - donde puedo visualizar el backlog?
     - donde puedo ver el backlog?
     - donde puedo ver el product backlog o el sprint backlog?  
+    - quiero ver el progreso del backlog
+    - quiero visualizar el sprint backlog
+    - quiero visualizar el product backlog
+    - quiero ver los backlogs
 
 - intent: diseño_scrum_board
   examples: |

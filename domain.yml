@@ -82,15 +82,15 @@ responses:
   - text: "Scrum es un marco que permite el trabajo colaborativo entre equipos. Anima a los equipos a aprender a través de las experiencias, a autoorganizarse mientras aborda un problema y a reflexionar sobre sus victorias y derrotas para mejorar continuamente. Aunque se considera a menudo un marco de gestión de proyectos ágil, scrum incluye un conjunto de reuniones, herramientas y funciones que, de forma coordinada, ayudan a los equipos a estructurar y gestionar su trabajo."
   
   utter_teoria_scrum: 
-  - text: "Scrum se basa en el empirismo y el pensamiento Lean. El empirismo afirma que el conocimiento proviene de la experiencia y de la toma de decisiones con base en lo observado. El pensamiento Lean reduce el desperdicio y se enfoca en lo esencial. Scrum emplea un enfoque iterativo e Incremental para optimizar la previsibilidad y controlar el riesgo. Scrum involucra a grupos de personas que colectivamente tienen todas las habilidades y experiencia para hacer el trabajo y compartir o adquirir dichas habilidades según sea necesario.
-  Scrum combina cuatro eventos formales para inspección y adaptación dentro de un evento contenedor, el Sprint. Estos eventos funcionan porque implementan los pilares empíricos de Scrum de transparencia, inspección y adaptación."
+  - text: "Scrum se basa en el empirismo y el pensamiento Lean. El empirismo afirma que el conocimiento proviene de la experiencia y de la toma de decisiones con base en lo observado. El pensamiento Lean reduce el desperdicio y se enfoca en lo esencial. Scrum emplea un enfoque iterativo e incremental para optimizar la previsibilidad y controlar el riesgo. Involucra a grupos de personas que colectivamente tienen todas las habilidades y experiencia para hacer el trabajo y compartir o adquirir dichas habilidades según sea necesario.
+  Combina cuatro eventos formales para inspección y adaptación dentro de un evento contenedor, el Sprint. Estos eventos funcionan porque implementan los pilares empíricos de Scrum de transparencia, inspección y adaptación."
 
   utter_roles:
   - text: "Un equipo Scrum suele estar compuesto por grupos de trabajo de entre 3 a 9 miembros del equipo de desarrollo, más el Scrum Master y el Product Owner. Cada uno de estos roles tiene diferentes responsabilidades: \n
   - El Scrum Master tiene dos funciones principales dentro del marco de trabajo: gestionar el proceso Scrum y ayudar a eliminar impedimentos que puedan afectar a la entrega del producto. \n
   - El Product Owner, que representa a los stakeholders. Es el encargado de optimizar y maximizar el valor del producto, siendo la persona encargada de gestionar el flujo de valor del producto a través del Product Backlog. \n
   - El equipo de desarrollo se encarga de desarrollar el producto, auto-organizándose y auto-gestionándose para conseguir entregar un incremento de software al final del ciclo de desarrollo. \n
-Además existen roles auxiliares en los equipos Scrum que no tienen un rol formal y no se involucran frecuentemente en el proceso Scrum, sin embargo deben ser tomados en cuenta.\n
+  Además existen roles auxiliares en los equipos Scrum que no tienen un rol formal y no se involucran frecuentemente en el proceso Scrum, sin embargo deben ser tomados en cuenta.\n
   - Stakeholders (Clientes, Proveedores, Vendedores, etc): Son las personas que hacen posible el proyecto y para quienes el proyecto producirá el beneficio acordado que justifica su desarrollo. Solo participan directamente durante las revisiones del sprint."
   
   utter_roles_2:
@@ -150,7 +150,7 @@ Además, se encarga de las labores de mentoring y formación, coaching y de faci
 
   utter_eventos: 
   - text: "Los eventos de Scrum son bloques de tiempo que pre-definen una duración máxima y tienen por finalidad crear regularidad y consistencia, para evitar la necesidad de reuniones no definidas en Scrum. El desarrollo del producto es realizado en iteraciones sucesivas denominadas Sprint. Cada Sprint debe declarar un objetivo y entregar una pequeña muestra que incremente el valor del producto. Dentro de un Sprint se realizan diversos eventos y actividades, tales como: \n
-  1) Sprint Planning: En esta reunión participa todo el Scrum Team. Su propósito es determinar qué es lo que se puede entregar en el incremento resultante del Sprint que comienza, y cómo se hará el trabajo necesario para ello. Una reunión de Sprint Planning no debe durar más de dos horas por cada semana de Sprint.\n
+  1) Sprint Planning: En esta reunión participa todo el Scrum Team. Su propósito es determinar qué es lo que se puede entregar en el incremento resultante del Sprint que comienza, y cómo se hará el trabajo necesario para ello. \n
   2) Daily Scrum: Es la reunión diaria fija. Todos los días, el equipo de desarrollo se reúne por un máximo de 15 minutos. Está orientada a realizar una inspección y adaptación con un ciclo rápido. \n
   3) Sprint Review: En esta reunión se revisa todo el trabajo realizado por el Equipo de Desarrollo, y sirve para inspeccionar el incremento. \n
   4) La Retrospectiva de Sprint es una reunión que busca mejorar la forma en que el Scrum Team desempeña su trabajo. En ella se expone todo lo que fue observado en el Sprint, lo que no están funcionando o qué puede ser mejorado en cuanto a personas, relaciones interpersonales, procesos y herramientas utilizadas."
@@ -159,9 +159,8 @@ Además, se encarga de las labores de mentoring y formación, coaching y de faci
   - text: "Scrum define cinco eventos o ceremonias principales para cumplir con el control de sus procesos. Dentro de un Sprint (periodo mínimo en que un equipo de desarrollo puede generar valor a través de un incremento determinado) se encuentran los eventos ya mencionados."
 
   utter_sprint_planning:
-  - text: "El Sprint Planning es una reunión que se realiza al comienzo de cada Sprint donde participa el equipo Scrum al completo; sirve para inspeccionar el Product Backlog y que el equipo de desarrollo seleccione los Product Backlog Items en los que va a trabajar durante el siguiente Sprint. Estos Product Backlog Items son los que compondrán el Sprint Backlog. \n 
-  Durante esta reunión, el product owner presenta el Product Backlog actualizado que el equipo de desarrollo se encarga de estimar, además de intentar clarificar aquellos ítems que crea necesarios.\n
-  Este evento se divide en dos partes: en la primera parte de la reunión se trata Qué se va a hacer en el siguiente Sprint y, en la segunda parte, se discute el Cómo. La primera parte está organizada y liderada por el product owner, mientras que de la segunda parte se encarga el Development Team. La única labor del Scrum Master es asegurarse de que la reunión existe como parte de Scrum y que se mantiene dentro de las duraciones estimadas.\n
+  - text: "El Sprint Planning es una reunión que se realiza al comienzo de cada Sprint donde participa el equipo Scrum al completo; sirve para inspeccionar el Product Backlog y que el equipo de desarrollo seleccione los Product Backlog Items en los que va a trabajar durante el siguiente Sprint. Estos Product Backlog Items son los que compondrán el Sprint Backlog. Durante esta reunión, el product owner presenta el Product Backlog actualizado que el equipo de desarrollo se encarga de estimar, además de intentar clarificar aquellos ítems que crea necesarios.\n
+  Este evento se divide en dos partes: en la primera parte de la reunión se trata Qué se va a hacer en el siguiente Sprint y, en la segunda parte, se discute el Cómo. La primera parte está organizada y liderada por el Product Owner, mientras que de la segunda parte se encarga el Development Team. La única labor del Scrum Master es asegurarse de que la reunión existe como parte de Scrum y que se mantiene dentro de las duraciones estimadas.\n
   Puede durar hasta 8 horas para Sprints de 4 semanas."
   
   utter_daily_meeting:
