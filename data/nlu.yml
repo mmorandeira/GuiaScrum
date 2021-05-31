@@ -235,6 +235,19 @@ nlu:
     - que tendria que hacer durante el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
     - que tendria que hacer durante el [sprint review]{"entity":"etapa","value":"review"}?
     - que tendria que hacer durante la ejecución del [sprint]{"entity":"etapa","value":"sprint"}?
+    - que tengo que hacer en esa fase
+    - que tengo que hacer en esa etapa
+    - que tengo que hacer en ese evento
+    - que tendria que hacer durante esa fase
+    - que tendria que hacer durante ese evento
+    - que tendria que hacer durante esa etapa
+    - que debo hacer durante esa fase
+    - que debo hacer durante ese evento
+    - que debo hacer durante esa etapa
+    - que hago durante esa fase
+    - que hago durante esa etapa
+    - que deberia hacer en ese evento
+    - que deberia hacer en esa etapa
 
 - intent: product_backlog
   examples: |
@@ -326,56 +339,56 @@ nlu:
 
 - intent: sprint_planning
   examples: |
-    - que es el sprint planning?
-    - para que es el sprint planning?
-    - para que se hace el sprint planning?
-    - para que sirve el sprint planning?
-    - para que se planifica el sprint?
-    - me das mas información sobre el sprint planning?
-    - me das mas detalles sobre el sprint planning?
-    - no entendi bien el sprint planning
-    - no entendi que es el sprint planning
-    - me podes repetir lo que es el sprint planning?
+    - que es el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - para que es el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - para que se hace el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - para que sirve el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - para que se [planifica el sprint]{"entity":"etapa","value":"planning"}?
+    - me das mas información sobre el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - me das mas detalles sobre el [sprint planning]{"entity":"etapa","value":"planning"}?
+    - no entendi bien el [sprint planning]{"entity":"etapa","value":"planning"}
+    - no entendi que es el [sprint planning]{"entity":"etapa","value":"planning"}
+    - me podes repetir lo que es el [sprint planning]{"entity":"etapa","value":"planning"}?
 
 - intent: daily_meeting
   examples: |
-    - que es la daily meeting?
-    - que es la daily scrum?
-    - para que es la daily scrum?
-    - para que se hace la daily meeting?
-    - para que se hace la daily scrum?
-    - para que sirve la daily meeting?
-    - me das mas información sobre la daily meeting?
-    - me das mas detalles sobre la daily meeting?
-    - no entendi bien la daily meeting
-    - no entendi que es la daily meeting
-    - me podes repetir lo que es la daily meeting?
+    - que es la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - que es la [daily scrum]{"entity":"etapa","value":"daily"}?
+    - para que es la [daily scrum]{"entity":"etapa","value":"daily"}?
+    - para que se hace la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - para que se hace la [daily scrum]{"entity":"etapa","value":"daily"}?
+    - para que sirve la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - me das mas información sobre [daily meeting]{"entity":"etapa","value":"daily"}?
+    - me das mas detalles sobre la [daily meeting]{"entity":"etapa","value":"daily"}?
+    - no entendi bien la [daily meeting]{"entity":"etapa","value":"daily"}
+    - no entendi que es la [daily meeting]{"entity":"etapa","value":"daily"}
+    - me podes repetir lo que es la [daily meeting]{"entity":"etapa","value":"daily"}?
 
 - intent: sprint_review
   examples: |
-    - que es el sprint review?
-    - para que es el sprint review?
-    - para que se hace el sprint review?
-    - para que sirve el sprint review?
-    - para que sirve hacer una retrospectiva al final del sprint?
-    - me das mas información sobre el sprint review?
-    - me das mas detalles sobre el sprint review?
-    - no entendi bien el sprint review
-    - no entendi que es el sprint review
-    - me podes repetir lo que es el sprint review?
+    - que es el [sprint review]{"entity":"etapa","value":"review"}?
+    - para que es el [sprint review]{"entity":"etapa","value":"review"}?
+    - para que se hace el [sprint review]{"entity":"etapa","value":"review"}?
+    - para que sirve el [sprint review]{"entity":"etapa","value":"review"}?
+    - para que sirve hacer una [revisión ]{"entity":"etapa","value":"review"} al final del sprint?
+    - me das mas información sobre el [sprint review]{"entity":"etapa","value":"review"}?
+    - me das mas detalles sobre el [sprint review]{"entity":"etapa","value":"review"}?
+    - no entendi bien el [sprint review]{"entity":"etapa","value":"review"}
+    - no entendi que es el [sprint review]{"entity":"etapa","value":"review"}
+    - me podes repetir lo que es el [sprint review]{"entity":"etapa","value":"review"}?
 
 - intent: sprint_retrospective
   examples: |
-    - que es el sprint retrospective?
-    - para que es el sprint retrospective?
-    - para que se hace el sprint retrospective?
-    - para que sirve el sprint retrospective?
-    - para que sirve hacer una revisión al final del sprint?
-    - me das mas información sobre el sprint retrospective?
-    - me das mas detalles sobre el sprint retrospective?
-    - no entendi bien el sprint retrospective
-    - no entendi que es el sprint retrospective
-    - me podes repetir lo que es el sprint retrospective?
+    - que es el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - para que es el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - para que se hace el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - para que sirve el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - para que sirve hacer una [retrospectiva]{"entity":"etapa","value":"retrospective"} al final del sprint?
+    - me das mas información sobre el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - me das mas detalles sobre el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
+    - no entendi bien el [sprint retrospective]{"entity":"etapa","value":"retrospective"}
+    - no entendi que es el [sprint retrospective]{"entity":"etapa","value":"retrospective"}
+    - me podes repetir lo que es el [sprint retrospective]{"entity":"etapa","value":"retrospective"}?
 
 
 - intent: sprint_grooming
