@@ -90,7 +90,7 @@ class ActionTrabajoDesarrollador(Action):
 class ActionQueHacer(Action):
 
     '''
-        Esta acción le indica al usuario que tiene que hacer según su rol y fase en la cual se encuentra o solicite.
+        Esta acción le indica al usuario que tiene que hacer según su rol y fase que solicite.
     '''
 
     def name(self) -> Text:
@@ -112,7 +112,7 @@ class ActionQueHacer(Action):
 class ActionVerificarRol(Action):
 
     '''
-        Esta acción verifica si se almacenado en un slot el rol del usuario, sino se lo pide.
+        Esta acción verifica si se almacenó en un slot el rol del usuario, sino se lo solicita.
     '''
 
     def name(self) -> Text:
