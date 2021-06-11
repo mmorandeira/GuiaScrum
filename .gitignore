@@ -2,3 +2,4 @@
 /.vscode
 /credentials.yml
 /actions/__pycache__
+venv/
